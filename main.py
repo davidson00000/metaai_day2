@@ -5,10 +5,13 @@ from langchain.utilities import DuckDuckGoSearchAPIWrapper
 from langchain.agents import initialize_agent, Tool
 from langchain.agents.agent_types import AgentType
 from langchain.chat_models import ChatOpenAI
+from dotenv import load_dotenv
 import os
 
-# 🔑 OpenAI APIキーを設定
-os.environ["OPENAI_API_KEY"] = "sk-..."
+# 🔐 .envからAPIキーを読み込む
+load_dotenv()
+api_key = os.getenv("OPENAI_API_KEY")
+os.environ["OPENAI_API_KEY"] = api_key
 
 # 🔎 検索ツールの設定
 search = DuckDuckGoSearchAPIWrapper()
