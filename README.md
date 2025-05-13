@@ -1,13 +1,13 @@
-# metaai_day2
+# metaai_day2 (SerpAPI版)
 
-LangChain + GPT + DuckDuckGo を使って「検索→要約」するシンプルなエージェント。
+LangChain + GPT + SerpAPIを使って「Google検索→要約」するシンプルなエージェントです。
 
-## セットアップ手順（Windows向け）
+## セットアップ手順（Windows）
 
-### 1. 仮想環境の作成
+### 1. 仮想環境の作成と起動
 ```bash
-python -m venv agi_day2
-.\agi_day2\Scripts\activate
+python -m venv venv
+.\venv\Scripts\activate
 ```
 
 ### 2. ライブラリのインストール
@@ -15,12 +15,15 @@ python -m venv agi_day2
 pip install -r requirements.txt
 ```
 
-### 3. .env ファイルを作成してAPIキーを記載
-`.env.example` を `.env` にコピーして、OpenAIのAPIキーを書き込みます：
+### 3. .envファイルを作成
+`.env.example` を `.env` にコピーし、以下を設定：
 
 ```
-OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxx
+OPENAI_API_KEY=sk-xxxxxxxxxxxx
+SERPAPI_API_KEY=xxxxxxxxxxxxxxxx
 ```
+
+※ SerpAPIは https://serpapi.com から無料登録でAPIキー取得可能（月100回まで無料）
 
 ### 4. 実行
 ```bash
