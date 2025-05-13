@@ -7,7 +7,7 @@
 ### 1. 仮想環境の作成
 ```bash
 python -m venv agi_day2
-.gi_day2\Scriptsctivate
+.agi_day2\Scripts\activate
 ```
 
 ### 2. ライブラリのインストール
